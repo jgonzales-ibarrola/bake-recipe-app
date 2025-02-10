@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AISuggestions from "./AISuggestions";
 import GetRecipe from "./GetRecipe";
+import { getRecipeFromMistral } from "../ai";
 
 const IngredientsList = ({ ingredients }: { ingredients: string[] }) => {
 	const [aiSuggestion, setAISuggestion] = useState("");
@@ -8,8 +9,13 @@ const IngredientsList = ({ ingredients }: { ingredients: string[] }) => {
 		<li key={idx}>{ingredient}</li>
 	));
 
-	function handleGetRecipe() {
-		setAISuggestion('truth')
+	async function handleGetRecipe() {
+		try {
+			const aiSuggests = await getRecipeFromMistral(ingredients)
+			setAISuggestion(aiSuggests!)
+		} catch (error) {
+			console.log(error);
+		}
 	}
 
 	return (
@@ -22,7 +28,7 @@ const IngredientsList = ({ ingredients }: { ingredients: string[] }) => {
 
 			{ingredients.length > 3 && <GetRecipe onGetRecipe={handleGetRecipe} />}
 
-			{aiSuggestion && <AISuggestions />}
+			{aiSuggestion && <AISuggestions suggestions={aiSuggestion} />}
 		</div>
 	);
 };

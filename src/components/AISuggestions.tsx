@@ -1,12 +1,9 @@
-const AISuggestions = () => {
+import Markdown from 'react-markdown'
+
+const AISuggestions = ({suggestions}) => {
   return (
     <section className="AISuggestions">
-      <h2>AI Suggest that...</h2>
-      <ul>
-        <li>some</li>
-        <li>list</li>
-        <li>here</li>
-      </ul>
+     <Markdown>{suggestions}</Markdown>
     </section>
   )
 }
