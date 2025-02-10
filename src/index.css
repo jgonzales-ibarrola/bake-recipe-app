@@ -54,6 +54,15 @@ button {
   padding: 8px 24px;
 }
 
+ul {
+  list-style-type: disc; 
+}
+
+li {
+  margin-left: 16px;
+  line-height: 32px;
+}
+
 header {
   padding: 12px 0;
   background-color: var(--pink);
@@ -101,4 +110,5 @@ header {
   display: flex;
   gap: 8px;
   justify-content: space-between;
+  margin-bottom: 32px;
 }
