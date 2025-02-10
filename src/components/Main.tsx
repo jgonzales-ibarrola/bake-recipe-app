@@ -3,12 +3,7 @@ import AddIngredient from "./AddIngredient";
 import IngredientsList from "./IngredientsList";
 
 const Main = () => {
-	const [ingredients, setIngredients] = useState([
-		"oregano",
-		"pepper",
-		"AP flour",
-		"chocolate",
-	]);
+	const [ingredients, setIngredients] = useState<string[]>([]);
 
 	const handleAddIngredient = (newIngredient: string) => {
 		setIngredients((prevIngredients) => [
