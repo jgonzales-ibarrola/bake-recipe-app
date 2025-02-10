@@ -1,11 +1,11 @@
-import AddIngredient from "./components/AddIngredient"
 import Header from "./components/Header"
+import Main from "./components/Main"
 
 const App = () => {
   return (
     <>
       <Header />
-      <AddIngredient />
+      <Main />
     </>
   )
 }
