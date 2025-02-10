@@ -53,3 +53,21 @@ small {
 button {
   padding: 8px 24px;
 }
+
+header {
+  padding: 12px 0;
+  background-color: var(--pink);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav .nav-link {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--neutral-950);
+}
