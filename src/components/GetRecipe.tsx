@@ -1,6 +1,8 @@
 import Button from "./Button"
 
-const GetRecipe = () => {
+const GetRecipe = ({onGetRecipe} : {
+  onGetRecipe: () => void;
+}) => {
   return (
     <div className="get-recipe">
       <div className="get-recipe--desc">
@@ -8,7 +10,7 @@ const GetRecipe = () => {
         <p>Generate a recipe based on your ingredients provided.</p>
       </div>
 
-      <Button type="button" className="get-recipe-cta">Get Recipe</Button>
+      <Button type="button" className="get-recipe-cta" onClick={onGetRecipe}>Get Recipe</Button>
     </div>
   )
 }
