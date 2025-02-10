@@ -57,6 +57,7 @@ button {
 header {
   padding: 12px 0;
   background-color: var(--pink);
+  margin: 0 0 32px;
 }
 
 .nav {
@@ -82,4 +83,22 @@ header {
 
 .text-field:focus-visible {
   outline: 2px solid var(--pink);
+}
+
+.custom-button {
+  padding: 8px 32px;
+  font-size: var(--text-para);
+  border-radius: 4px;
+  border: none;
+  background-color: var(--dirty-yellow);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.add-ingredient {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
 }
