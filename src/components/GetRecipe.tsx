@@ -1,7 +1,8 @@
 import Button from "./Button"
 
-const GetRecipe = ({onGetRecipe} : {
+const GetRecipe = ({onGetRecipe, loading} : {
   onGetRecipe: () => void;
+  loading: boolean;
 }) => {
   return (
     <div className="get-recipe">
@@ -10,7 +11,7 @@ const GetRecipe = ({onGetRecipe} : {
         <p>Generate a recipe based on your ingredients provided.</p>
       </div>
 
-      <Button type="button" className="get-recipe-cta" onClick={onGetRecipe}>Get Recipe</Button>
+      <Button type="button" className="get-recipe-cta" onClick={onGetRecipe} disabled={loading}>{loading ? 'Generating' : 'Get Recipe'}</Button>
     </div>
   )
 }
